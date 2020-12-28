@@ -56,7 +56,7 @@ const main = async function() {
 	await Promise.all(queue);
 	for (let i=0; i <= num; i++) {
 		command = `cat ${videoName}-num.mpeg >> ${videoName}.mpeg; rm -rf ${videoName}-num.mpeg`;
-		execCommand(command);
+		await execCommand(command);
 	}
 
 	process.exit();

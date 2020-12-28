@@ -28,7 +28,7 @@ const execCommand = async function (command) {
 	})
 }
 const main = async function() {
-	let allData  = fs.readFileSync(videoName+ '.m3u8', 'utf-8').split('\n').filter(t => t.match(/^http/));
+	let allData  = fs.readFileSync('./m3u8s/'+videoName+ '.m3u8', 'utf-8').split('\n').filter(t => t.match(/^http/));
 	console.log('allData', allData.length);
 	let t = '';
 	let num = 0;
